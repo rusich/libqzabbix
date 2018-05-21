@@ -4,9 +4,10 @@
 #
 #-------------------------------------------------
 
+QT += network widgets
 QT       -= gui
 
-TARGET = libqzabbix
+TARGET = qzabbix
 TEMPLATE = lib
 
 DEFINES += LIBQZABBIX_LIBRARY
@@ -23,11 +24,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        zabbix.cpp
+    qzabbix.cpp
 
 HEADERS += \
-        zabbix.h \
-        libqzabbix_global.h 
+        libqzabbix_global.h \ 
+    qzabbix.h
 
 unix {
     target.path = /usr/lib
