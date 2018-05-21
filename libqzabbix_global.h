@@ -1,0 +1,12 @@
+#ifndef LIBQZABBIX_GLOBAL_H
+#define LIBQZABBIX_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(LIBQZABBIX_LIBRARY)
+#  define LIBQZABBIXSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define LIBQZABBIXSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // LIBQZABBIX_GLOBAL_H
