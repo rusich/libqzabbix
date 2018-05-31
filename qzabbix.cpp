@@ -27,8 +27,11 @@ bool QZabbix::login()
     userAuth["user"] = this->user;
     userAuth["password"] = this->password;
     //userAuth["userData"] = "false";
-    QJsonArray params;
-    params.append(userAuth);
+//    params.append(userAuth);
+    QJsonObject params;
+    params["user"] = this->user;
+    params["password"] = this->password;
+//    params["userData"] = false;
 
     QJsonObject* response = zabbixRequest("user.login",&userAuth);
     if(!response->contains("error") && response->contains("result"))

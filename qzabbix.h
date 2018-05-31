@@ -6,7 +6,7 @@
 #include <QNetworkRequest>
 #include <QNetworkAccessManager>
 
-class LIBQZABBIXSHARED_EXPORT QZabbix
+class LIBQZABBIXSHARED_EXPORT QZabbix : public QObject
 {
 
 public:
