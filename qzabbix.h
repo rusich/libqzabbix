@@ -15,15 +15,16 @@ public:
     bool login();
     bool logout();
     QJsonObject *zabbixRequest(const char* method, QJsonObject *params = NULL);
+    inline QString getAuthStr() {return auth;}
 private:
     bool loggedOn = false;
     QString user;
     QString password;
     QString zabbixURL;
-    QString auth;
     QNetworkRequest* networkRequest;
     QNetworkAccessManager* nam;
     unsigned long _requestID;
+    QString auth;
 };
 
 #endif // ZABBIX_H
