@@ -16,6 +16,7 @@ public:
     bool logout();
     QJsonObject *zabbixRequest(const char* method, QJsonObject *params = NULL);
     inline QString getAuthStr() {return auth;}
+    inline bool isLoggedOn() { return loggedOn;}
 private:
     bool loggedOn = false;
     QString user;
